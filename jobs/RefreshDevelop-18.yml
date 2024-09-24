@@ -1,0 +1,7 @@
+excludeSelector: ""
+fileVersion: 1
+id: "18"
+includeSelector: "{ location: WORK name: STG_lineitem } OR { location: WORK name: STG_orders }"
+name: RefreshDevelop
+type: Job
+version: 2
