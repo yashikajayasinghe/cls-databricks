@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "16"
+mappingDefinitions:
+  SOURCE:
+    database: coalesce
+    schema: sample_data
+  WORK:
+    database: aa_yashika_dev
+    schema: develop
+name: Dbr-Env-01
+type: Environment

@@ -13,7 +13,7 @@ metadata:
 
     config:
       - groupName: Options
-        items: 
+        items:
         - type: materializationSelector
           options:
             - view
@@ -34,7 +34,7 @@ metadata:
           default: UNION
           options:
           - "UNION"
-          - "UNION ALL" 
+          - "UNION ALL"
           isRequired: true
           enableIf: "{% if node.isMultisource %} true {% else %} false {% endif %}"
 name: View
