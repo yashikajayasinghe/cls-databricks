@@ -1,7 +1,7 @@
 excludeSelector: ""
 fileVersion: 1
 id: "21"
-includeSelector: ""
+includeSelector: "{ location: WORK name: STG_customer } OR { location: SOURCE name: customer }"
 name: New Job
 type: Job
 version: 2
