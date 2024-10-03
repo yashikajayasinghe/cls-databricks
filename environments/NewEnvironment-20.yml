@@ -1,5 +1,11 @@
 fileVersion: 1
 id: "20"
-mappingDefinitions: {}
+mappingDefinitions:
+  SOURCE:
+    database: coalesce
+    schema: sample_data
+  WORK:
+    database: yashika_ev
+    schema: dev
 name: New Environment
 type: Environment
