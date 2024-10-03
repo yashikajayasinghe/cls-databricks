@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "16"
+mappingDefinitions:
+  SOURCE:
+    database: ""
+    schema: ""
+  WORK:
+    database: ""
+    schema: ""
+name: Dbr-Env-01
+type: Environment

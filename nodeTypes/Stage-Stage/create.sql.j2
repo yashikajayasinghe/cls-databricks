@@ -8,7 +8,7 @@
 	CREATE OR REPLACE TABLE {{ ref_no_link(node.location.name, node.name) }}
 	(
 		{% for col in columns %}
-			"{{ col.name }}" {{ col.dataType }}
+			`{{ col.name }}` {{ col.dataType }}
 			{%- if not col.nullable %} NOT NULL
 				{%- if col.defaultValue | length > 0 %} DEFAULT {{ col.defaultValue }}{% endif %}
 			{% endif %}
@@ -17,7 +17,9 @@
 		{% endfor %}
 	)
 	{%- if node.description | length > 0 %} COMMENT = '{{ node.description | escape }}'{% endif %}
-
+  TBLPROPERTIES(
+  'delta.columnMapping.mode' = 'name', 'delta.feature.allowColumnDefaults' = 'supported'
+)
 
 {% elif node.materializationType == 'view' %}
     {{ stage('Create Stage View') }}
@@ -25,7 +27,7 @@
     CREATE OR REPLACE VIEW {{ ref_no_link(node.location.name, node.name) }}
     (
         {% for col in columns %}
-            "{{ col.name }}"
+            `{{ col.name }}`
             {%- if col.description | length > 0 %} COMMENT '{{ col.description | escape }}'{% endif %}
             {%- if not loop.last -%}, {% endif %}
         {% endfor %}
@@ -35,7 +37,7 @@
     {% for source in sources %}
         SELECT
         {% for col in source.columns %}
-            {{ get_source_transform(col) }} AS "{{ col.name }}"
+            {{ get_source_transform(col, quoteChar='`') }} AS `{{ col.name }}`
             {%- if not loop.last -%}, {% endif %}
         {% endfor %}
 

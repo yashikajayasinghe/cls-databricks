@@ -1,0 +1,156 @@
+fileVersion: 1
+id: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+name: customer
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f3dc0e6-0cc4-4203-ba17-d5d522e771a4
+          stepCounter: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: c_custkey
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f3eab1d-f28c-433a-afcd-f6425778c365
+          stepCounter: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: c_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c5d25e7-c977-4b59-84d9-e24950d7502c
+          stepCounter: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: c_address
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1699bc08-2410-4123-954f-e55227fc8942
+          stepCounter: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: c_nationkey
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 233ea573-7af8-46d0-85cd-04ea36218aa6
+          stepCounter: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: c_phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a822fcd-bc3f-4c1a-a8b8-4d63afa53105
+          stepCounter: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        name: c_acctbal
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02a6371f-bf38-44ab-8f7d-550b691551fd
+          stepCounter: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: c_mktsegment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c84a922-96ba-4f82-992b-0d68451c9a9a
+          stepCounter: 14206f58-4ebe-4b2f-ae8f-e65e936873ae
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: c_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'customer') }}
+  name: customer
+  schema: ""
+  sqlType: Source
+  table: customer
+  type: sourceInput
+  version: 1
+type: Node

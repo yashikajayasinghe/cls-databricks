@@ -17,7 +17,7 @@
 		{% if config.truncateBefore %}
 	
 			{{ stage('Truncate Stage Table') }}
-			TRUNCATE IF EXISTS {{ ref_no_link(node.location.name, node.name) }}
+			TRUNCATE TABLE {{ ref_no_link(node.location.name, node.name) }}
 	
 		{% endif %}
 	
@@ -27,7 +27,7 @@
 			INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
 				(
 					{% for col in columns %}
-						"{{ col.name }}"
+						`{{ col.name }}`
 						{%- if not loop.last -%},{% endif %}
 					{% endfor %}
 				)
@@ -42,7 +42,7 @@
 				INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
 				(
 					{% for col in source.columns %}
-						"{{ col.name }}"
+						`{{ col.name }}`
 						{%- if not loop.last -%},{% endif %}
 					{% endfor %}
 				)
@@ -50,7 +50,7 @@
 	
 			SELECT
 			{% for col in source.columns %}
-                {{ get_source_transform(col) }} AS "{{ col.name }}"
+                {{ get_source_transform(col, quoteChar='`') }} AS `{{ col.name }}`
 				{%- if not loop.last -%}, {% endif %}
 			{% endfor %}
 	
