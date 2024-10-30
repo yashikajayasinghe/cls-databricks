@@ -4,4 +4,3 @@ id: "22"
 includeSelector: "{ location: SOURCE name: customer } OR { location: WORK name: STG_customer }"
 name: ForUnlimitedLoadingIssue
 type: Job
-version: 2
