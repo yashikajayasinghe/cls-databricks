@@ -6,6 +6,6 @@ mappingDefinitions:
     schema: sample_data
   WORK:
     database: aa_yashika_dev
-    schema: qa-preview
+    schema: qa-preview-2
 name: QA-Preview-DBX
 type: Environment
