@@ -1,0 +1,71 @@
+fileVersion: 1
+id: 592558c3-db1c-45ed-8435-a35aeab09f47
+name: courses_sc
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52f7ccfc-32d4-42c9-a00b-b197ca0023bd
+          stepCounter: 592558c3-db1c-45ed-8435-a35aeab09f47
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        name: course_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: be8eca5f-3560-4224-b177-c8123c33202a
+          stepCounter: 592558c3-db1c-45ed-8435-a35aeab09f47
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: course_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06d454f2-bfaa-43de-811e-537f22655328
+          stepCounter: 592558c3-db1c-45ed-8435-a35aeab09f47
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: instructor
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'courses_sc') }}
+  name: courses_sc
+  schema: ""
+  sqlType: Source
+  table: courses_sc
+  type: sourceInput
+  version: 1
+type: Node

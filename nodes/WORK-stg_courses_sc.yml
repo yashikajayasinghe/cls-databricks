@@ -1,0 +1,81 @@
+fileVersion: 1
+id: 98a68193-eaa9-4e54-9e23-6d406f552e52
+name: stg_courses_sc
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4bb69471-ed7a-4ce4-a451-1deb497091f1
+          stepCounter: 98a68193-eaa9-4e54-9e23-6d406f552e52
+        config: {}
+        dataType: DECIMAL
+        description: ""
+        name: course_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 52f7ccfc-32d4-42c9-a00b-b197ca0023bd
+                stepCounter: 592558c3-db1c-45ed-8435-a35aeab09f47
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f18458cd-79ea-4deb-af26-813eecd1979f
+          stepCounter: 98a68193-eaa9-4e54-9e23-6d406f552e52
+        config: {}
+        dataType: STRING
+        description: ""
+        name: course_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: be8eca5f-3560-4224-b177-c8123c33202a
+                stepCounter: 592558c3-db1c-45ed-8435-a35aeab09f47
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9c8731b-de3f-41c0-9987-104fa0ec61a8
+          stepCounter: 98a68193-eaa9-4e54-9e23-6d406f552e52
+        config: {}
+        dataType: STRING
+        description: ""
+        name: instructor
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 06d454f2-bfaa-43de-811e-537f22655328
+                stepCounter: 592558c3-db1c-45ed-8435-a35aeab09f47
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: courses_sc
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'courses_sc') }} `courses_sc`
+        name: stg_courses_sc
+        noLinkRefs: []
+  name: stg_courses_sc
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
