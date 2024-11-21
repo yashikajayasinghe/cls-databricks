@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "22"
+mappingDefinitions:
+  SOURCE:
+    database: coalesce
+    schema: sample_data
+  WORK:
+    database: aa_yashika_dev
+    schema: qa-preview
+name: QA-Preview-DBX
+type: Environment
