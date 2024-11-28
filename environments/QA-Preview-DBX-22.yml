@@ -3,7 +3,7 @@ id: "22"
 mappingDefinitions:
   SOURCE:
     database: coalesce
-    schema: sample_data
+    schema: sample_source
   WORK:
     database: aa_yashika_dev
     schema: qa-preview-2
