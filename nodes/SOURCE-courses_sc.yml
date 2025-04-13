@@ -3,7 +3,6 @@ id: 592558c3-db1c-45ed-8435-a35aeab09f47
 name: courses_sc
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: ""
   locationName: SOURCE
@@ -60,12 +59,9 @@ operation:
           - columnReferences: []
             transform: ""
         transform: ""
-    join:
-      joinCondition: FROM {{ ref('SOURCE', 'courses_sc') }}
   name: courses_sc
   schema: ""
   sqlType: Source
-  table: courses_sc
   type: sourceInput
   version: 1
 type: Node
