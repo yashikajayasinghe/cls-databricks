@@ -44,7 +44,7 @@ operation:
           - columnReferences:
               - columnCounter: db3b6cb8-d675-468a-8baa-0bd1fd080327
                 stepCounter: a12a1b07-76a8-4fc6-8bee-ba4c073d23a3
-            transform: ""
+            transform: CAST(expr AS DATE)
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 61643150-72b4-47e3-9a47-9620f4dd984c
