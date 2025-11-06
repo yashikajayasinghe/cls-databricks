@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "46"
+includeSelector: "{ location: TARGET name: stg_trips }"
+name: job1
+type: Job

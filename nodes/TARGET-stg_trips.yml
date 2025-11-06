@@ -1,0 +1,124 @@
+fileVersion: 1
+id: 9a46243e-a309-4ec9-a271-656d573ca082
+name: stg_trips
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 23dd4db3-6928-4723-acf6-13fbbbaacec2
+          stepCounter: 9a46243e-a309-4ec9-a271-656d573ca082
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: tpep_pickup_datetime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e0d9fdb3-39bd-41ed-9ac9-dba136a17200
+                stepCounter: a12a1b07-76a8-4fc6-8bee-ba4c073d23a3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 828d3cdf-4a1d-41f8-8d66-5c0556b9f8db
+          stepCounter: 9a46243e-a309-4ec9-a271-656d573ca082
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: tpep_dropoff_datetime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db3b6cb8-d675-468a-8baa-0bd1fd080327
+                stepCounter: a12a1b07-76a8-4fc6-8bee-ba4c073d23a3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61643150-72b4-47e3-9a47-9620f4dd984c
+          stepCounter: 9a46243e-a309-4ec9-a271-656d573ca082
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: trip_distance
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 010b32d8-b7f3-472a-8b69-3b40307d7f65
+                stepCounter: a12a1b07-76a8-4fc6-8bee-ba4c073d23a3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aace8ba9-4d5f-4412-8a18-737ca1072461
+          stepCounter: 9a46243e-a309-4ec9-a271-656d573ca082
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: fare_amount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 20a07014-0132-4982-af3c-f50e6d89b9e7
+                stepCounter: a12a1b07-76a8-4fc6-8bee-ba4c073d23a3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20a3fa4f-e2ac-424b-9e59-4e1df81b46c5
+          stepCounter: 9a46243e-a309-4ec9-a271-656d573ca082
+        config: {}
+        dataType: INT
+        description: ""
+        name: pickup_zip
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cf606fb4-bcb5-488b-9b22-39f3764e3d05
+                stepCounter: a12a1b07-76a8-4fc6-8bee-ba4c073d23a3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 31a6ff12-a085-4416-8672-bf8702526318
+          stepCounter: 9a46243e-a309-4ec9-a271-656d573ca082
+        config: {}
+        dataType: INT
+        description: ""
+        name: dropoff_zip
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 23999827-b167-4acd-b6ea-6b7c52f9fc59
+                stepCounter: a12a1b07-76a8-4fc6-8bee-ba4c073d23a3
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          trips: a12a1b07-76a8-4fc6-8bee-ba4c073d23a3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: trips
+        join:
+          joinCondition: FROM {{ ref('SRC', 'trips') }} `trips`
+        name: stg_trips
+        noLinkRefs: []
+  name: stg_trips
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

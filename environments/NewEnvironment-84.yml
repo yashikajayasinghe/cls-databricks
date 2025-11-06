@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "84"
+mappingDefinitions:
+  SRC:
+    database: samples
+    schema: nyctaxi
+  TARGET:
+    database: aa_yashika_dev
+    schema: qa-preview-2
+name: New Environment
+type: Environment
